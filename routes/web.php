@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[ScheduleController::class,'index'])->name('index');
 
 Route::get('/calendar/add/{id}',[ScheduleController::class,'add'])->name('add');
+Route::post('/calendar/add/{id}',[ScheduleController::class,'store'])->name('store');
