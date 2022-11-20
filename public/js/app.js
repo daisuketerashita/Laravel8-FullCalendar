@@ -15698,8 +15698,8 @@ var calendar = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__.Calendar(cale
   locale: "ja",
   dateClick: function dateClick(e) {
     console.log(e.dateStr);
-    axios__WEBPACK_IMPORTED_MODULE_3___default().get("/calendar/detail/" + e.dateStr).then(function (res) {
-      location.href = "/calendar/detail/" + e.dateStr;
+    axios__WEBPACK_IMPORTED_MODULE_3___default().get("/calendar/add/" + e.dateStr).then(function (res) {
+      location.href = "/calendar/add/" + e.dateStr;
     })["catch"](function () {
       // バリデーションエラーなど
       alert("登録に失敗しました");

@@ -19,9 +19,9 @@ let calendar = new Calendar(calendarEl, {
         console.log(e.dateStr);
 
         axios
-            .get("/calendar/detail/" + e.dateStr)
+            .get("/calendar/add/" + e.dateStr)
             .then((res) => {
-                location.href = "/calendar/detail/" + e.dateStr;
+                location.href = "/calendar/add/" + e.dateStr;
             })
             .catch(() => {
                 // バリデーションエラーなど

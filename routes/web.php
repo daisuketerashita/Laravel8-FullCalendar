@@ -14,12 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ScheduleController::class,'index'])->name('index');
 
-Route::get('/calendar', function () {
-    return view('calendar');
-})->name('index');
-
-Route::get('/calendar/detail/{id}',[ScheduleController::class,'detail'])->name('detail');
+Route::get('/calendar/add/{id}',[ScheduleController::class,'add'])->name('add');
